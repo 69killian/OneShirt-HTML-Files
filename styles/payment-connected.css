@@ -1,0 +1,319 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(243, 243, 243);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    margin-top: 150px;
+}
+
+p.description {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+form {
+    background-color: white;
+    padding: 100px 150px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    gap: 30px; /* Espace entre les sections du formulaire */
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 8px; /* Coins arrondis pour un effet plus doux */
+}
+
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* Espace entre les colonnes */
+}
+
+.client-info,
+.payment-info {
+    flex: 1; /* Les colonnes prennent une taille égale */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-logos {
+    display: flex; /* Aligne les images en ligne */
+    gap: 10px; /* Espace entre les images */
+    margin-bottom: 15px; /* Espace sous les images */
+}
+
+.card-logos img {
+    height: 30px; /* Ajustez la taille des images */
+    object-fit: contain; /* Assure que les images sont bien contenues */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea {
+    margin-bottom: 1.5em; /* Espace entre les champs */
+    padding: 12px 100px 12px 12px; /* Espace intérieur des champs */
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%; /* Utiliser toute la largeur disponible */
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(174, 174, 174);
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+
+button[type="submit"] {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 12px 20px; /* Ajustement du padding pour un meilleur alignement */
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 30px; /* Espace entre les champs et le bouton */
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.main-payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-div-payment {
+    display: flex;
+    justify-content: center; /* Centrer le bouton */
+    margin-top: 30px; /* Espace au-dessus du bouton */
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin-top: 100px;
+    }
+
+    p.description {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+    }
+
+    form {
+        padding: 30px 20px;
+        margin-top: 50px;
+    }
+
+    .form-content {
+        flex-direction: column; /* Passer en mode colonne pour les petits écrans */
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea {
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 1.5em; /* Espace supplémentaire pour éviter les chevauchements */
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+
+    p.description {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    form {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    .form-content {
+        flex-direction: column; /* Passer en mode colonne pour les petits écrans */
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea {
+        padding: 10px;
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 1.5em; /* Espace supplémentaire pour éviter les chevauchements */
+    }
+
+    button[type="submit"] {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+    background-color: white;
+    margin-top: 150px;
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}

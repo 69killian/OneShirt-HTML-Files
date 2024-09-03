@@ -1,0 +1,598 @@
+body  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 70px;
+}
+
+
+/* Header style */
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: aqua;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 70px;
+padding: 0 20px;
+z-index: 1000;
+}
+
+.header-right-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.header-left-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+flex-grow: 1; 
+}
+
+.recherche {
+border: 1px solid rgb(181, 181, 181);
+padding: 10px;
+width: 100%;
+max-width: 500px; 
+border-radius: 100px;
+color: black;
+transition: width 0.3s ease; 
+}
+
+.logo {
+height: 50px; 
+width: auto;
+}
+
+
+@media (max-width: 768px) {
+.recherche {
+    max-width: 300px; 
+}
+
+.logo {
+    height: 40px; 
+}
+}
+
+
+@media (max-width: 480px) {
+.recherche {
+    max-width: 200px; 
+}
+
+.logo {
+    height: 30px; 
+}
+
+.header-right-hand {
+    gap: 10px; 
+}
+
+header {
+    flex-direction: column; 
+    height: auto;
+    align-items: flex-start; 
+}
+
+.header-left-hand, .header-right-hand {
+    width: 100%;
+}
+
+.header-right-hand {
+    order: 2; 
+    justify-content: flex-start; 
+    margin-top: 10px; 
+}
+
+.header-left-hand {
+    order: 1; 
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Tooltip Boutique **/
+.tooltip-container {
+position: relative;
+display: inline-block;
+}
+
+.tooltip-target {
+cursor: pointer;
+}
+
+.tooltip-content {
+visibility: hidden;
+width: 250px;
+background-color: #ffffff;
+color: rgb(166, 166, 166);
+font-weight: 300;
+text-align: left;
+padding: 40px 30px;
+border-radius: 10px;
+position: absolute;
+z-index: 1;
+top: 100%; /* Positionne le tooltip juste en dessous de l'élément cible */
+left: 0;
+opacity: 0;
+transition: opacity 0.3s;
+border: solid 1px rgb(197, 197, 197);
+}
+
+.tooltip-container:hover .tooltip-content {
+visibility: visible;
+opacity: 1;
+}
+
+.tooltip-heading {
+margin: 0;
+font-size: 1.2em;
+color: black;
+font-weight: 400; /* Augmente la graisse de la police pour le heading */
+border-bottom: 1px solid #ddd; /* Ajoute une ligne sous le heading */
+padding-bottom: 5px;
+margin-bottom: 20px;
+}
+
+.tooltip-section {
+margin-bottom: 10px;
+}
+
+.tooltip-section h3 {
+margin: 0;
+font-size: 1.1em;
+color: black;
+font-weight: 300;
+margin-top: 20px;
+}
+
+.tooltip-section p {
+margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/** Tooltip À Propos **/
+.tooltip-container-about {
+position: relative;
+display: inline-block;
+}
+
+.tooltip-target-about {
+cursor: pointer;
+}
+
+.tooltip-content-about {
+visibility: hidden;
+width: 250px;
+background-color: #ffffff;
+color: rgb(166, 166, 166);
+font-weight: 300;
+text-align: left;
+padding: 40px 30px;
+border-radius: 10px;
+position: absolute;
+z-index: 1;
+top: 100%; /* Positionne le tooltip juste en dessous de l'élément cible */
+left: 0;
+opacity: 0;
+transition: opacity 0.3s;
+border: solid 1px rgb(197, 197, 197);
+}
+
+.tooltip-container-about:hover .tooltip-content-about {
+visibility: visible;
+opacity: 1;
+}
+
+.tooltip-heading-about {
+margin: 0;
+font-size: 1.2em;
+color: black;
+font-weight: 400; /* Augmente la graisse de la police pour le heading */
+border-bottom: 1px solid #ddd; /* Ajoute une ligne sous le heading */
+padding-bottom: 5px;
+margin-bottom: 20px;
+}
+
+.tooltip-section-about {
+margin-bottom: 10px;
+}
+
+.tooltip-section-about h3 {
+margin: 0;
+font-size: 1.1em;
+color: black;
+font-weight: 300;
+margin-top: 20px;
+}
+
+.tooltip-section-about p {
+margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto; /* Marge de 40px en haut et en bas, centré horizontalement */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.profile-details {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-column {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-top: 0;
+}
+
+.profile-item {
+    margin-bottom: 15px;
+}
+
+.profile-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-item p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+
+
+.profile-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.profile-content {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.profile-details {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-column {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-top: 0;
+}
+
+.profile-item {
+    margin-bottom: 15px;
+}
+
+.profile-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-item p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Edit Form Styles */
+.edit-form {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#saveChangesButton {
+    background-color: #28a745;
+    margin-right: 10px;
+}
+
+#saveChangesButton:hover {
+    background-color: #218838;
+}
+
+#cancelEditButton {
+    background-color: #dc3545;
+}
+
+#cancelEditButton:hover {
+    background-color: #c82333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/** Styles du footer **/
+.footer {
+display: flex;
+justify-content: space-between;
+padding: 150px 400px 150px 50px;
+font-size: 18px;
+opacity: 0; /* Opacité initiale */
+transform: translateY(20px); /* Position initiale */
+transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+opacity: 1; /* Assure que la section est complètement visible */
+transform: translateY(0); /* Réinitialise la position */
+animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+font-weight: 300;
+color: rgb(116, 116, 116);
+cursor: pointer;
+transition: 0.1s;
+margin-bottom: 30px;
+}
+
+.footer p:hover {
+color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+font-weight: bold;
+margin-bottom: 30px;
+color: rgb(56, 56, 56);
+pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+height: 50px; 
+width: 150px;
+object-fit: cover;
+margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+.footer {
+    flex-direction: column; /* Empiler les colonnes verticalement */
+    align-items: center;
+    padding: 20px; /* Ajuster le padding pour les petits écrans */
+    font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+}
+
+.footer-logos {
+    margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+}
+
+.footer-usecases, .footer-explore, .footer-ressources {
+    margin: 0; /* Supprimer les marges latérales */
+    text-align: center; /* Centrer le texte pour les petits écrans */
+}
+
+.bold-footer p {
+    font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+    margin-bottom: 10px; /* Réduire l'espace sous le titre */
+}
+
+.footer p {
+    font-size: 14px; /* Réduire la taille de la police des éléments */
+    margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

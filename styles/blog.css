@@ -1,0 +1,651 @@
+body  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+
+/* Header style */
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: aqua;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 70px;
+padding: 0 20px;
+z-index: 1000;
+}
+
+.header-right-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.header-left-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+flex-grow: 1; 
+}
+
+.recherche {
+border: 1px solid rgb(181, 181, 181);
+padding: 10px;
+width: 100%;
+max-width: 500px; 
+border-radius: 100px;
+color: black;
+transition: width 0.3s ease; 
+}
+
+.logo {
+height: 50px; 
+width: auto;
+}
+
+
+@media (max-width: 768px) {
+.recherche {
+    max-width: 300px; 
+}
+
+.logo {
+    height: 40px; 
+}
+}
+
+
+@media (max-width: 480px) {
+.recherche {
+    max-width: 200px; 
+}
+
+.logo {
+    height: 30px; 
+}
+
+.header-right-hand {
+    gap: 10px; 
+}
+
+header {
+    flex-direction: column; 
+    height: auto;
+    align-items: flex-start; 
+}
+
+.header-left-hand, .header-right-hand {
+    width: 100%;
+}
+
+.header-right-hand {
+    order: 2; 
+    justify-content: flex-start; 
+    margin-top: 10px; 
+}
+
+.header-left-hand {
+    order: 1; 
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Titre du blog */
+.title-blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Ajuste la hauteur en fonction du contenu */
+    font-size: 40px;
+    margin: 0; /* Supprime la marge externe */
+    background-color: #d2d2d2;
+    padding: 120px 0px;
+    text-align: center; /* Centre le texte pour les petits écrans */
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+    .title-blog {
+        font-size: 30px;
+        padding: 120px 0px; /* Ajuste le padding pour les écrans moyens */
+    }
+}
+
+/* Pour les écrans de taille petite */
+@media (max-width: 768px) {
+    .title-blog {
+        font-size: 24px;
+        padding: 150px 0px; /* Ajuste le padding pour les petits écrans */
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .title-blog {
+        font-size: 20px;
+        padding: 100px 0px; /* Ajuste le padding pour les très petits écrans */
+    }
+}
+
+/* Conteneur de l'image du blog */
+.main-img-blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Supprime la marge externe */
+    padding: 0; /* Supprime le padding interne */
+}
+
+.main-img-blog img {
+    height: 450px;
+    width: 100%; /* Ajuste la largeur de l'image */
+    object-fit: cover; /* Ajuste l'image pour remplir le conteneur sans déformation */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-section {
+    display: flex;
+    align-items: center; /* Aligne l'image et le texte en haut */
+    justify-content: center;
+    padding: 110px 500px 150px 500px;
+    gap: 30px; /* Espace entre l'image et le texte */
+}
+
+.image-container {
+    height: 300px; /* Hauteur fixe pour l'image */
+}
+
+.image-container img {
+    width: 800px;
+    height: 550px;
+    object-fit: cover; /* Ajuste l'image pour remplir le conteneur sans déformation */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+}
+
+.text-content {
+    flex: 1; /* Prend le reste de l'espace disponible */
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.text-content .header {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.text-content .subheading {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text-content .text {
+    font-size: 1em;
+    height: 300px;
+    width: 700px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Media Queries pour rendre responsive */
+@media (max-width: 1200px) {
+    .content-section {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        flex: 0 0 250px; /* Ajuster la taille de l'image */
+        height: auto; /* Hauteur automatique pour l'image */
+    }
+
+    .text-content .header {
+        font-size: 2.2em;
+    }
+
+    .text-content .subheading {
+        font-size: 1.4em;
+    }
+
+    .text-content .text {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text-content {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .text-content .header {
+        font-size: 2em;
+    }
+
+    .text-content .subheading {
+        font-size: 1.2em;
+    }
+
+    .text-content .text {
+        font-size: 0.9em;
+        width: auto; /* Permet au texte de s'adapter à la largeur disponible */
+        padding: 0 10px; /* Ajouter un peu de padding pour le confort de lecture */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content .header {
+        font-size: 1.8em;
+    }
+
+    .text-content .subheading {
+        font-size: 1.1em;
+    }
+
+    .text-content .text {
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Blog style **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles par défaut des cartes de blog */
+.blog-card {
+    border: 1px solid rgb(236, 236, 236);
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/* Styles pour les cartes de blog avec animation */
+.blog-card.animate {
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+
+/* Délai d'animation pour chaque élément de blog */
+.blog-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.blog-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.blog-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.blog-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Styles de la section Blog */
+.Blogs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; 
+    gap: 150px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.blog-with-title {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.titre-section-blog {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 100px; 
+    margin-top: -100px;
+    height: 0; 
+    overflow: visible; 
+}
+
+.subheading-section-blog {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 70px; 
+    margin-top: -70px;
+    height: 0; 
+    overflow: visible;
+    color: rgb(103, 103, 103);
+}
+
+.blog-title-card {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.img-blog {
+    height: 170px;
+    width: 170px;
+}
+
+.blog-description {
+    color: rgb(103, 103, 103);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.see-more-button button {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* Styles pour les grands écrans */
+@media (max-width: 1280px) {
+    .Blogs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-blog  {
+        max-width: 200px; /* Réduit encore la taille maximale de l'image sur les petits écrans */
+    }
+    .blog-description {
+        font-size: 15px;
+    }
+}
+
+/* Styles pour les écrans moyens */
+@media (max-width: 768px) {
+    .blog-card {
+        flex: 1 1 200px; /* La carte occupe 200px par défaut sur les écrans moyens */
+    }
+
+    .img-blog  {
+        max-width: 100px; /* Réduit la taille maximale de l'image sur les écrans moyens */
+        max-height: 100px;
+    }
+    .blog-description {
+        font-size: 18px;
+        width: 200px;
+    }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+    .Blogs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-blog  {
+        max-width: 100px; /* Réduit encore la taille maximale de l'image sur les petits écrans */
+    }
+    .blog-description {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/** Like and Dislike Style **/
+
+
+.like-blog {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: gray;
+}
+
+#likeButton, #dislikeButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#dislikeButton {
+    background-color: #f44336; /* Couleur rouge pour le dislike */
+}
+
+#likeButton:hover {
+    background-color: #45a049;
+}
+
+#dislikeButton:hover {
+    background-color: #e53935;
+}
+
+#likeCount, #dislikeCount {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}
+
+
+
+
+

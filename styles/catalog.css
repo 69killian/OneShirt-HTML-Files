@@ -1,0 +1,679 @@
+body  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Header style */
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: aqua;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 70px;
+padding: 0 20px;
+z-index: 1000;
+}
+
+.header-right-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.header-left-hand {
+display: flex;
+align-items: center;
+gap: 20px;
+flex-grow: 1; 
+}
+
+.recherche {
+border: 1px solid rgb(181, 181, 181);
+padding: 10px;
+width: 100%;
+max-width: 450px; 
+border-radius: 100px;
+color: black;
+transition: width 0.3s ease; 
+}
+
+.logo {
+height: 50px; 
+width: auto;
+}
+
+
+@media (max-width: 768px) {
+.recherche {
+    max-width: 300px; 
+}
+
+.logo {
+    height: 40px; 
+}
+}
+
+
+@media (max-width: 480px) {
+.recherche {
+    max-width: 200px; 
+}
+
+.logo {
+    height: 30px; 
+}
+
+.header-right-hand {
+    gap: 10px; 
+}
+
+header {
+    flex-direction: column; 
+    height: auto;
+    align-items: flex-start; 
+}
+
+.header-left-hand, .header-right-hand {
+    width: 100%;
+}
+
+.header-right-hand {
+    order: 2; 
+    justify-content: flex-start; 
+    margin-top: 10px; 
+}
+
+.header-left-hand {
+    order: 1; 
+}
+}
+
+
+
+
+
+
+
+
+
+/** Main content Catalog**/
+
+.main-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 150px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-section {
+    border: solid 1px rgb(197, 197, 197);
+    padding: 40px 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+
+/* Media query pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    .main-catalog {
+        flex-direction: column; /* Passe les éléments en colonne */
+        align-items: center;
+        gap: 50px; /* Réduit l'espacement entre les éléments */
+        margin-top: 50px; /* Réduit la marge supérieure */
+    }
+
+    .todo-section {
+        padding: 30px 40px; /* Réduit le padding */
+        width: 100%; /* S'adapte à la largeur disponible */
+        align-items: center; /* Centre le contenu */
+    }
+
+    .filters {
+        flex-direction: column; /* Arrange les filtres en colonne */
+        gap: 20px; /* Augmente l'espace entre les éléments */
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .main-catalog {
+        flex-direction: column; /* Toujours en colonne */
+        align-items: center;
+        gap: 30px; /* Réduit encore l'espacement entre les éléments */
+        margin-top: 90px; /* Réduit davantage la marge supérieure */
+    }
+
+    .todo-section {
+        padding: 20px 30px; /* Réduit encore le padding */
+        width: 100%; /* Prend toute la largeur de l'écran */
+        align-items: center; /* Centre le contenu */
+        gap: 10px; /* Augmente l'espacement entre les éléments à l'intérieur */
+    }
+
+    .filters {
+        flex-direction: column; /* Toujours en colonne */
+        gap: 15px; /* Espacement entre les filtres */
+        width: 100%; /* Prend toute la largeur de l'écran */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Products Style on main catalog */
+.Products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+    margin-top: 70px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation aux éléments des produits */
+.Products div {
+    border: 1px solid rgb(236, 236, 236);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+    box-sizing: border-box; /* Inclure padding et border dans la taille totale */
+    transition: transform 0.3s ease; /* Transition douce pour la taille */
+}
+
+.Products div img {
+    width: 100%; /* L'image prend toute la largeur disponible de la carte */
+    max-width: 100%; /* Largeur maximale initiale de l'image */
+    height: auto; /* Hauteur automatique pour conserver le ratio */
+    transition: max-width 0.3s ease; /* Transition douce pour la taille de l'image */
+}
+
+/* Délai d'animation pour chaque élément */
+.Products div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.Products div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.Products div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.Products div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Pour les très grands écrans */
+@media (min-width: 1916px) {
+    .Products {
+        grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Colonnes plus larges sur les grands écrans */
+    }
+
+    .Products div {
+        max-width: 500px; /* Taille maximale des cartes */
+        padding: 30px; /* Ajoute plus de padding pour un meilleur espacement */
+    }
+
+    .Products div img {
+        max-width: 450px; /* Augmente la taille maximale de l'image */
+    }
+}
+
+/* Styles pour les écrans moyens */
+@media (max-width: 768px) {
+    .Products {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans moyens */
+    }
+
+    .Products div {
+        margin-top: 70px;
+    }
+
+    .Products div img {
+        max-width: 150px; /* Réduit la taille maximale de l'image sur les écrans moyens */
+    }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+    .Products {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+
+    .Products div {
+        margin-top: 70px;
+    }
+
+    .Products div img {
+        max-width: 100px; /* Réduit encore la taille maximale de l'image sur les petits écrans */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Pagination style**/
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 380px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.left-arrow-icon {
+    transform: rotate(180deg);
+    height: 10px;
+}
+
+.right-arrow-icon {
+    height: 10px;
+}
+/* Media query pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    .pagination {
+        padding-left: 0; /* Supprime le padding gauche */
+        gap: 15px; /* Réduit l'espacement entre les éléments */
+        margin-top: 30px; /* Réduit la marge supérieure */
+        margin-bottom: 30px; /* Réduit la marge inférieure */
+    }
+
+    .left-arrow-icon, .right-arrow-icon {
+        height: 8px; /* Réduit la taille des icônes */
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .pagination {
+        flex-direction: column; /* Arrange les éléments en colonne */
+        padding-left: 0; /* Supprime le padding gauche */
+        gap: 10px; /* Réduit encore l'espacement entre les éléments */
+        margin-top: 20px; /* Réduit la marge supérieure */
+        margin-bottom: 20px; /* Réduit la marge inférieure */
+    }
+
+    .left-arrow-icon, .right-arrow-icon {
+        height: 6px; /* Réduit encore la taille des icônes */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Section Newsletter **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles de la section Newsletter */
+.section-newsletter {
+    display: flex;
+    align-items: stretch; /* Alignement étiré pour égaliser les hauteurs */
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/* Styles pour la section Newsletter avec animation */
+.section-newsletter.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+/* Styles du formulaire d'inscription */
+.form-subscription,
+.Pros-subscription {
+    width: 100%; /* Même largeur pour le formulaire et les cartes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    border: solid 1px rgb(197, 197, 197);
+    border-radius: 5px;
+    padding: 50px; /* Ajustement des marges et paddings pour uniformité */
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+    position: relative;
+}
+
+.form-subscription {
+    justify-content: center;
+}
+
+.Pros-subscription {
+    justify-content: center; /* Centrer le contenu des cartes */
+}
+
+.email-input {
+    width: 100%; /* Remplir toute la largeur du conteneur */
+    padding: 12px;
+    border: solid 1px rgb(197, 197, 197);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.email-label {
+    position: absolute;
+    top: 25px; /* Ajustement de la position du label */
+    left: 36px; /* Ajustement de la position du label */
+}
+
+.email-submit-button  {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.title-pros {
+    font-weight: 500;
+    font-size: 30px;
+    height: 0; 
+    overflow: visible; 
+    color: black;
+}
+
+.Pros-subscription {
+    position: relative;
+    color: rgb(56, 56, 56);
+}
+
+.Pros-subscription div {
+    position: absolute;
+    top: 0;
+    left: 155px;
+}
+
+
+/* Pour les grands écrans */
+@media (min-width: 768px) {
+    .section-newsletter {
+        flex-direction: row; /* Revenir à une disposition en ligne pour les grands écrans */
+        justify-content: space-between;
+    }
+
+    .form-subscription {
+        width: 48%; /* Ajuster la largeur pour les écrans plus grands */
+        margin-right: 0; /* Supprimer l'espacement droit */
+        margin-bottom: 0; /* Supprimer l'espacement inférieur */
+    }
+
+    .Pros-subscription {
+        width: 48%; /* Ajuster la largeur pour les écrans plus grands */
+        margin: 0; /* Supprimer les marges entre les cartes */
+    }
+
+    .title-pros {
+        font-size: 30px; /* Réduire la taille de la police pour les petits écrans */
+        
+    }
+}
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .form-subscription,
+    .Pros-subscription {
+        width: 100%; /* Utiliser toute la largeur disponible */
+        margin: 0; /* Enlever les marges latérales */
+        padding: 20px; /* Réduire le padding pour les petits écrans */
+    }
+
+    .email-label {
+        position: static; /* Réinitialiser la position pour les petits écrans */
+        margin-bottom: 10px; /* Ajouter un espace en bas du label */
+    }
+
+    .email-input {
+        width: 100%; /* Assurer que l'input occupe toute la largeur du conteneur */
+        margin-bottom: 20px; /* Réduire l'espace en bas de l'input */
+    }
+
+    .email-submit-button {
+        width: 100%; /* Faire en sorte que le bouton prenne toute la largeur */
+        padding: 12px; /* Ajuster le padding pour les petits écrans */
+    }
+
+    .title-pros {
+        display: none;
+    }
+
+    .Pros-subscription {
+        position: static; /* Réinitialiser la position pour les petits écrans */
+        padding: 20px; /* Réduire le padding pour les petits écrans */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}

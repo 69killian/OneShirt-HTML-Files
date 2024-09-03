@@ -1,0 +1,384 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(''); /* Remplacez par l'URL de l'image de fond One Piece */
+    background-color: grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header style */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 20px;
+    z-index: 1000;
+    }
+    
+    .header-right-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    }
+    
+    .header-left-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; 
+    }
+    
+    .recherche {
+    border: 1px solid rgb(181, 181, 181);
+    padding: 10px;
+    width: 100%;
+    max-width: 450px; 
+    border-radius: 100px;
+    color: black;
+    transition: width 0.3s ease; 
+    }
+    
+    .logo {
+    height: 50px; 
+    width: auto;
+    }
+    
+    
+    @media (max-width: 768px) {
+    .recherche {
+        max-width: 300px; 
+    }
+    
+    .logo {
+        height: 40px; 
+    }
+    }
+    
+    
+    @media (max-width: 480px) {
+    .recherche {
+        max-width: 200px; 
+    }
+    
+    .logo {
+        height: 30px; 
+    }
+    
+    .header-right-hand {
+        gap: 10px; 
+    }
+    
+    header {
+        flex-direction: column; 
+        height: auto;
+        align-items: flex-start; 
+    }
+    
+    .header-left-hand, .header-right-hand {
+        width: 100%;
+    }
+    
+    .header-right-hand {
+        order: 2; 
+        justify-content: flex-start; 
+        margin-top: 10px; 
+    }
+    
+    .header-left-hand {
+        order: 1; 
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    margin-top: 150px;
+}
+p.description {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+form {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px rgb(197, 197, 197);
+    flex-direction: column;
+    display: flex;
+    padding: 50px 30px;
+    margin-top: 100px;
+}
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px 200px 10px 10px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(174, 174, 174);
+}
+button[type="submit"] {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background-color: #218838;
+    background-color: rgb(31, 31, 31);
+}
+
+.main-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin-top: 100px;
+    }
+
+    p.description {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+    }
+
+    form {
+        padding: 30px 20px;
+        margin-top: 50px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea {
+        padding: 10px;
+        width: 200px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 150px;
+    }
+
+    p.description {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    form {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea {
+        padding: 8px;
+        width: 90%;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+    background-color: white;
+    margin-top: 150px;
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}

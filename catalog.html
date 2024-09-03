@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Catalogue des produits - OneShirt</title>
+</head>
+<body>
+
+
+
+
+      <!-- Header -->
+
+      <header id="header">
+        <div class="header-left-hand">
+            <img class="logo" src="images/ONSHIRT NOIR 11.png" alt="OneShirt">
+            
+        </div>
+        <div class="header-right-hand">
+            <p>Boutique</p>
+            <p>Blog</p>
+            <p>A propos</p>
+            <p>Contact</p>
+            <button>Connexion</button>
+            <button>Panier 0</button>
+        </div>
+    </header>
+
+
+
+
+
+
+<section class="main-catalog">
+
+    <section class="todo-section">
+        <!-- Checkboxes -->
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+            <p>Description</p>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+            <p>Description</p>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+            <p>Description</p>
+        </div>
+
+        <!--Price Slider-->
+        <label for="price-slider">Prix :</label>
+        <input type="range" id="price-slider" name="price" min="1" max="100" value="1" oninput="updateQuantityValue(this.value)">
+        <span id="quantity-value">$100</span>
+
+    
+        <!-- Colors and Size Selectors -->
+        <div class="todo-item">
+            <p>Color</p>
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    
+        <div class="todo-item">
+            <p>Size</p>
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    
+        <div class="todo-item">
+            <input type="checkbox" id="todo">
+            <label for="todo">Label</label>
+        </div>
+    </section>
+    
+    <section>
+        <article class="filters">
+            <input class="recherche" type="text" placeholder="Rechercher">
+            <button>Nouveautés</button>
+            <button>Prix croissants</button>
+            <button>Prix décroissants</button>
+            <button>Par Avis</button>
+        </article>
+        <article class="Products">
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>nom produit, type, promo ou non</p>
+                <p>0€</p>
+            </div>
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>text</p>
+                <p>0€</p>
+            </div>
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>text</p>
+                <p>0€</p>
+            </div>
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>text</p>
+                <p>0€</p>
+            </div>
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>text</p>
+                <p>0€</p>
+            </div>
+            <div>
+                <img src="images/Image.png" alt="">
+                <p>text</p>
+                <p>0€</p>
+            </div>
+        </article>
+    </section>
+
+</section>
+
+
+
+
+
+
+
+<!--Pagination-->
+<section class="pagination">
+    <img class="left-arrow-icon" src="images/Icon.png" alt="">
+    <div>Précédemment</div>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>...</button>
+    <button>67</button>
+    <button>68</button>
+    <div>Suivant</div>
+    <img class="right-arrow-icon" src="images/Icon.png" alt="">
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Newsletter, pros of subscribing -->
+         
+<section class="section-newsletter">
+    <form class="form-subscription" action="">
+        <label class="email-label" for="email">Email</label>
+        <input class="email-input" type="text" name="Email" id="Email" placeholder="Entrez votre adresse Mail">
+        <button class="email-submit-button" type="submit">S'inscrire à la newsletter</button>
+    </form>
+    <div class="Pros-subscription">
+        <div>
+            <p class="title-pros">Title</p>
+        </div>
+        <p>Body text for whatever you’d like to say. <br> Add main takeaway points, quotes, <br> anecdotes, or even a very very short <br>story. </p>
+    </div>
+    <div class="Pros-subscription">
+        <div>
+            <p class="title-pros">Title</p>
+        </div>
+        
+        <p>Body text for whatever you’d like to say. <br> Add main takeaway points, quotes, <br> anecdotes, or even a very very short <br>story. </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Component -->
+
+<section class="footer">
+    <div class="footer-logos">
+        <div class="footer-oneshirt-logo"><img src="images/ONSHIRT NOIR 11.png" alt="Logo OneShirt"></div>
+        <img src="images/X Logo.png" alt="X">
+        <img src="images/Logo Instagram.png" alt="Instagram">
+        <img src="images/Logo YouTube.png" alt="Youtube">
+        <img src="images/LinkedIn.png" alt="Linkedin">
+    </div>
+
+    <div class="footer-usecases">
+        <div class="bold-footer"><p>Use Cases</p></div>
+        
+        <p>UI design</p>
+        <p>UX design</p>
+        <p>Wireframing</p>
+        <p>Diagramming</p>
+        <p>Brainstorming</p>
+        <p>Online whiteboard</p>
+        <p>Team collaboration</p>
+    </div>
+
+    <div class="footer-explore">
+        <div class="bold-footer"><p>Explore</p></div>
+        
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development feature</p>
+        <p>Design systems</p>
+        <p>Collaboration Features</p>
+        <p>Design process</p>
+        <p>FigJam</p>
+    </div>
+
+    <div class="footer-ressources">
+        <div class="bold-footer"><p>Ressources</p></div>
+        
+        <p>Blog</p>
+        <p>Best practices</p>
+        <p>Colors</p>
+        <p>Color wheel</p>
+        <p>Support</p>
+        <p>Developpers</p>
+        <p>Ressource library</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Newsletter animation on scroll -->
+
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const sectionNewsletter = document.querySelector('.section-newsletter');
+            
+                    // Fonction pour vérifier si un élément est visible dans la fenêtre
+                    const isElementInViewport = (el) => {
+                        const rect = el.getBoundingClientRect();
+                        return (
+                            rect.top < window.innerHeight &&
+                            rect.bottom > 0
+                        );
+                    };
+            
+                    // Fonction pour ajouter les classes d'animation aux éléments visibles
+                    const handleScroll = () => {
+                        if (isElementInViewport(sectionNewsletter)) {
+                            sectionNewsletter.classList.add('animate');
+                        }
+                    };
+            
+                    // Écoute l'événement de défilement
+                    window.addEventListener('scroll', handleScroll);
+            
+                    // Appel initial pour vérifier l'élément au chargement de la page
+                    handleScroll();
+                });
+            </script>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Footer animation on scroll -->
+            
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const footer = document.querySelector('.footer');
+            
+                    // Fonction pour vérifier si un élément est visible dans la fenêtre
+                    const isElementInViewport = (el) => {
+                        const rect = el.getBoundingClientRect();
+                        return (
+                            rect.top < window.innerHeight &&
+                            rect.bottom > 0
+                        );
+                    };
+            
+                    // Fonction pour ajouter les classes d'animation aux éléments visibles
+                    const handleScroll = () => {
+                        if (isElementInViewport(footer)) {
+                            footer.classList.add('animate');
+                        }
+                    };
+            
+                    // Écoute l'événement de défilement
+                    window.addEventListener('scroll', handleScroll);
+            
+                    // Appel initial pour vérifier l'élément au chargement de la page
+                    handleScroll();
+                });
+            </script>
+            
+            
+
+
+</body>
+</html>

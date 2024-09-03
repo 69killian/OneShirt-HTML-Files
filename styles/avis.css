@@ -1,0 +1,592 @@
+body  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-style: normal;
+}
+
+
+/* Header style */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.header-right-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; 
+}
+
+.recherche {
+    border: 1px solid rgb(181, 181, 181);
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 100px;
+    color: black;
+    transition: width 0.3s ease; 
+}
+
+.logo {
+    height: 50px; 
+    width: auto;
+}
+
+
+@media (max-width: 768px) {
+    .recherche {
+        max-width: 300px; 
+    }
+
+    .logo {
+        height: 40px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .recherche {
+        max-width: 200px; 
+    }
+
+    .logo {
+        height: 30px; 
+    }
+
+    .header-right-hand {
+        gap: 10px; 
+    }
+
+    header {
+        flex-direction: column; 
+        height: auto;
+        align-items: flex-start; 
+    }
+
+    .header-left-hand, .header-right-hand {
+        width: 100%;
+    }
+
+    .header-right-hand {
+        order: 2; 
+        justify-content: flex-start; 
+        margin-top: 10px; 
+    }
+
+    .header-left-hand {
+        order: 1; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Review Style Card **/
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles des cartes de critique */
+.review-card {
+    border: 1px solid rgb(236, 236, 236);
+    padding: 30px;
+    padding-right: 150px;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/* Styles pour les cartes de critique avec animation */
+.review-card.animate {
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+/* Délai d'animation pour chaque élément de critique */
+.review-card:nth-child(1).animate {
+    animation-delay: 0.1s;
+}
+.review-card:nth-child(2).animate {
+    animation-delay: 0.2s;
+}
+.review-card:nth-child(3).animate {
+    animation-delay: 0.3s;
+}
+
+/* Styles de la section Reviews */
+.Reviews {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; 
+    gap: 150px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.review-with-title {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.review-img {
+    height: 35px;
+    width: 130px;
+    margin-left: -18px;
+}
+
+.title-section-review {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 100px; 
+    margin-top: -100px;
+    height: 0; 
+    overflow: visible; 
+}
+
+.review-title-card {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 2px; /* Réduit l'espacement entre le titre et le corps de la revue */
+}
+
+.review-body {
+    color: rgb(103, 103, 103);
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0; /* Enlève les marges pour aligner le texte avec le titre */
+    padding: 0; /* Enlève les espacements internes */
+}
+
+.avatar-review {
+    display: flex;
+    align-items: center; /* Alignement vertical entre avatar et les infos */
+    gap: 10px; /* Espacement entre l'avatar et les textes */
+    margin-top: 20px; /* Espacement entre le corps de la revue et l'info du reviewer */
+}
+
+.avatar {
+    height: 45px;
+    width: 45px;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column; /* Alignement vertical des textes à droite de l'avatar */
+    margin: 0; /* Enlever les marges pour un alignement précis */
+}
+
+.reviewer-name, .review-date {
+    margin: 0; /* Enlever les marges pour aligner le texte avec l'avatar */
+    padding: 0; /* Enlever les espacements internes */
+}
+
+.reviewer-name {
+    font-weight: 500;
+    color: rgb(103, 103, 103);
+}
+
+.review-date {
+    font-weight: 300;
+    color: rgb(103, 103, 103);
+}
+
+.see-more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom: 150px;
+}
+
+.see-more-button button {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1280px) {
+    .Reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-card {
+        flex: 1 1 200px; /* La carte occupe 200px par défaut sur les écrans moyens */
+    }
+
+    .avatar {
+        max-width: 100px; /* Réduit la taille maximale de l'image sur les écrans moyens */
+        max-height: 100px;
+    }
+    .review-body {
+        font-size: 18px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-card {
+        flex: 1 1 200px; /* La carte occupe 200px par défaut sur les écrans moyens */
+    }
+
+    .avatar {
+        max-width: 100px; /* Réduit la taille maximale de l'image sur les écrans moyens */
+        max-height: 100px;
+    }
+    .review-body {
+        font-size: 18px;
+        width: 200px;
+    }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+    .Reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        max-width: 100px; /* Réduit encore la taille maximale de l'image sur les petits écrans */
+    }
+    .review-body {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    margin-top: 150px;
+}
+
+p.description {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px rgb(197, 197, 197);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 150px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet de relief */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+.main-review
+input[type="text"],
+.main-review
+input[type="email"],
+.main-review
+select,
+.main-review
+textarea {
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px;
+    width: 100%; /* Changement de la largeur pour s'adapter au conteneur parent */
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(74, 74, 74);
+}
+
+select {
+    height: 45px; /* Ajuste la hauteur du champ select pour correspondre aux autres champs */
+}
+
+textarea {
+    resize: vertical; /* Permet à l'utilisateur de redimensionner la zone de texte verticalement */
+}
+
+button[type="submit"] {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 15px 20px; /* Taille du bouton légèrement augmentée */
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+    align-self: flex-start; /* Alignement du bouton à gauche */
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.main-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px; /* Ajout d'un léger padding latéral pour un meilleur alignement sur les petits écrans */
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin-top: 100px;
+    }
+
+    p.description {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+    }
+
+    form {
+        padding: 30px 20px;
+        margin-top: 50px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 150px;
+    }
+
+    p.description {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    form {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}
+

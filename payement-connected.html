@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/payment-connected.css">
+    <title>Paiement</title>
+</head>
+<body>
+
+</head>
+<body>
+
+
+
+
+<!--Dans cette version, les informations du clients sont renseignés mais pas modifiables-->
+<!-- Payment Form -->
+<div class="main-payment">
+    <form>
+        <div class="form-content">
+            <div class="client-info">
+                <label for="firstname">Prénom</label>
+                <input type="text" id="firstname" name="firstname" required placeholder="Prénom" readonly>
+
+                <label for="lastname">Nom</label>
+                <input type="text" id="lastname" name="lastname" required placeholder="Nom" readonly>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Email" readonly>
+
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Numéro de téléphone" readonly>
+
+                <label for="address">Adresse</label>
+                <input type="text" id="address" name="address" required placeholder="Adresse" readonly>
+
+                <label for="postalcode">Code Postal</label>
+                <input type="text" id="postalcode" name="postalcode" required placeholder="Code Postal" readonly>
+            </div>
+
+            <div class="payment-info">
+                <!-- Images pour les cartes de crédit -->
+                <div class="card-logos">
+                    <img src="images/cprvfy9q.bmp" alt="Visa">
+                    <img src="images/Mastercard-logo.svg.png" alt="MasterCard">
+                    <img src="images/yxutmjlg.bmp" alt="American Express">
+                    <img src="images/spkvt5uz.bmp" alt="CB">
+                    <img src="images/i43cmo34.bmp" alt="Stripe">
+                </div>
+
+                <label for="creditcard">Numéro de Carte Bancaire</label>
+                <input type="text" id="creditcard" name="creditcard" required placeholder="1234 5678 9012 3456">
+
+                <label for="expiration">Date d'Expiration</label>
+                <input type="text" id="expiration" name="expiration" required placeholder="MM/AA">
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required placeholder="123">
+
+                <label for="promo">CODE PROMO</label>
+                <input type="text" id="promo" name="promo" placeholder="Si applicable">
+            </div>
+        </div>
+
+        <!-- Bouton de paiement centré en dessous des deux colonnes -->
+        <div class="button-div-payment">
+            <button type="submit">Procéder au Paiement</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+    <!-- Footer Component -->
+
+    <section class="footer">
+        <div class="footer-logos">
+            <div class="footer-oneshirt-logo"><img src="images/ONSHIRT NOIR 11.png" alt="Logo OneShirt"></div>
+            <img src="images/X Logo.png" alt="X">
+            <img src="images/Logo Instagram.png" alt="Instagram">
+            <img src="images/Logo YouTube.png" alt="Youtube">
+            <img src="images/LinkedIn.png" alt="Linkedin">
+        </div>
+    
+        <div class="footer-usecases">
+            <div class="bold-footer"><p>Use Cases</p></div>
+            
+            <p>UI design</p>
+            <p>UX design</p>
+            <p>Wireframing</p>
+            <p>Diagramming</p>
+            <p>Brainstorming</p>
+            <p>Online whiteboard</p>
+            <p>Team collaboration</p>
+        </div>
+    
+        <div class="footer-explore">
+            <div class="bold-footer"><p>Explore</p></div>
+            
+            <p>Design</p>
+            <p>Prototyping</p>
+            <p>Development feature</p>
+            <p>Design systems</p>
+            <p>Collaboration Features</p>
+            <p>Design process</p>
+            <p>FigJam</p>
+        </div>
+    
+        <div class="footer-ressources">
+            <div class="bold-footer"><p>Ressources</p></div>
+            
+            <p>Blog</p>
+            <p>Best practices</p>
+            <p>Colors</p>
+            <p>Color wheel</p>
+            <p>Support</p>
+            <p>Developpers</p>
+            <p>Ressource library</p>
+        </div>
+    </section>
+    </body>
+    </html>
+    
+    
+    
+    
+          
+                
+                <!-- Footer animation on scroll -->
+                
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const footer = document.querySelector('.footer');
+                
+                        // Fonction pour vérifier si un élément est visible dans la fenêtre
+                        const isElementInViewport = (el) => {
+                            const rect = el.getBoundingClientRect();
+                            return (
+                                rect.top < window.innerHeight &&
+                                rect.bottom > 0
+                            );
+                        };
+                
+                        // Fonction pour ajouter les classes d'animation aux éléments visibles
+                        const handleScroll = () => {
+                            if (isElementInViewport(footer)) {
+                                footer.classList.add('animate');
+                            }
+                        };
+                
+                        // Écoute l'événement de défilement
+                        window.addEventListener('scroll', handleScroll);
+                
+                        // Appel initial pour vérifier l'élément au chargement de la page
+                        handleScroll();
+                    });
+                </script>
+                

@@ -1,0 +1,316 @@
+body  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+
+/* Header style */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.header-right-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left-hand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; 
+}
+
+.recherche {
+    border: 1px solid rgb(181, 181, 181);
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 100px;
+    color: black;
+    transition: width 0.3s ease; 
+}
+
+.logo {
+    height: 50px; 
+    width: auto;
+}
+
+
+@media (max-width: 768px) {
+    .recherche {
+        max-width: 300px; 
+    }
+
+    .logo {
+        height: 40px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .recherche {
+        max-width: 200px; 
+    }
+
+    .logo {
+        height: 30px; 
+    }
+
+    .header-right-hand {
+        gap: 10px; 
+    }
+
+    header {
+        flex-direction: column; 
+        height: auto;
+        align-items: flex-start; 
+    }
+
+    .header-left-hand, .header-right-hand {
+        width: 100%;
+    }
+
+    .header-right-hand {
+        order: 2; 
+        justify-content: flex-start; 
+        margin-top: 10px; 
+    }
+
+    .header-left-hand {
+        order: 1; 
+    }
+}
+
+
+
+
+
+.title-FAQ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 40px;
+    margin: 70px 0 0 0;
+    background-color: #d2d2d2;
+    padding: 350px;
+    text-align: center; /* Centre le texte pour les petits écrans */
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+    .title-FAQ {
+        font-size: 30px;
+        padding: 200px;
+    }
+}
+
+/* Pour les écrans de taille petite */
+@media (max-width: 768px) {
+    .title-FAQ {
+        font-size: 24px;
+        padding: 150px;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .title-FAQ {
+        font-size: 20px;
+        padding: 100px;
+    }
+}
+
+
+
+
+
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 50px 20px;
+}
+
+.faq-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-section .description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 1.2em;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.faq-question:hover {
+    background-color: #ededed;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0;
+    font-size: 1.1em;
+    color: #555;
+    margin-left: 15px;
+}
+.faq-section-button {
+    display: block;
+    margin: 0 auto 30px auto; /* Centrage horizontal et un espace en dessous */
+    background-color: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: none; /* Suppression de la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1.2em; /* Taille de police */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.faq-section-button:hover {
+    background-color: #555; /* Couleur de fond au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** footer **/
+/** Animation d'apparition **/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/** Styles du footer **/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 400px 150px 50px;
+    font-size: 18px;
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(20px); /* Position initiale */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transitions supplémentaires si nécessaire */
+}
+
+/** Styles pour le footer avec animation **/
+.footer.animate {
+    opacity: 1; /* Assure que la section est complètement visible */
+    transform: translateY(0); /* Réinitialise la position */
+    animation: fadeInUp 0.5s ease-out forwards; /* Propriétés de l'animation */
+}
+
+.footer p {
+    font-weight: 300;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 30px;
+}
+
+.footer p:hover {
+    color: rgb(165, 165, 165);
+}
+
+.bold-footer p {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(56, 56, 56);
+    pointer-events: none;
+}
+
+.footer-oneshirt-logo img {
+    height: 50px; 
+    width: 150px;
+    object-fit: cover;
+    margin-left: -18px;
+}
+
+
+/* Pour les petits écrans */
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column; /* Empiler les colonnes verticalement */
+        align-items: center;
+        padding: 20px; /* Ajuster le padding pour les petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour plus d'espace */
+    }
+
+    .footer-logos {
+        margin-bottom: 20px; /* Espacement sous les logos pour séparer des autres sections */
+    }
+
+    .footer-usecases, .footer-explore, .footer-ressources {
+        margin: 0; /* Supprimer les marges latérales */
+        text-align: center; /* Centrer le texte pour les petits écrans */
+    }
+
+    .bold-footer p {
+        font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+        margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    }
+
+    .footer p {
+        font-size: 14px; /* Réduire la taille de la police des éléments */
+        margin: 5px 0; /* Ajouter un espace vertical entre les éléments */
+    }
+}
+
